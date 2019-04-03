@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import { IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../../config';
 import MovieThumb from '../MovieThumb/MovieThumb';
 import './MovieInfo.css';
@@ -11,13 +12,13 @@ const MovieInfo = ({ movie, directors }) => {
             }}
         >
             <div className="rmdb-movieinfo-content">
-                <div className="rmdb-movieinfo-thumb">
+                <div className="rmdb-movieinfo-thumb col-sm-4">
                     <MovieThumb
                         image={movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}` : './images/no_image.jpg'}
                         clickable={false}
                     />
                 </div>
-                <div className="rmdb-movieinfo-text">
+                <div className="rmdb-movieinfo-text col-sm-8">
                     <h1>{movie.title}</h1>
                     <h3>PLOT</h3>
                     <p>{movie.overview}</p>
