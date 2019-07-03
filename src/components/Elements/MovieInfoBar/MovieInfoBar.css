@@ -1,12 +1,14 @@
 .rmdb-movieinfobar {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 105px;
+  min-height: 100px;
+  height: auto;
   background: #1c1c1c;
-  position: relative;
-  padding: 25px 20px 0px 20px;
+  padding: 20px;
   box-sizing: border-box;
   font-family: 'Abel', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .rmdb-movieinfobar-content {
@@ -28,45 +30,30 @@
   float: left;
 }
 
-.fa-clock, .fa-ticket-alt {
+.fa-time, .fa-revenue {
   float: left;
   margin-top: -4px;
-
 }
 
-.fa-money-bill-alt {
+.fa-budget {
   float: left;
   margin-top: -3px;
 }
 
-@media (max-width: 991.98px) { 
+@media screen and (max-width: 425px) {
+  .rmdb-movieinfobar {
+    font-size: 14px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .fa-time, .fa-revenue, .fa-budget {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .rmdb-movieinfobar-content-col {
-    float: left;
-    width: 31%;
  
   }
-
-  .rmdb-movieinfobar {
-    width: 100%;
-    height: 220px;
-   
-  }
-
- }
-
-@media (max-width: 767.98px) { 
-
-  .rmdb-movieinfobar {
-    width: 100%;
-    height: 200px;
-   
-  }
-
-  .rmdb-movieinfobar-content-col:nth-child(2) {
-    float: left;
-    margin-left: -20px;
-    margin-right: 15px;
-  }
- 
- }
+}

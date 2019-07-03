@@ -22,7 +22,7 @@ class SearchBar extends Component {
         return (
             <div className="rmdb-searchbar">
                 <div className="rmdb-searchbar-content">
-                    <i className="fas fa-search fa-2x"></i>
+                    <i className="fas fa-search fa-2x" style={{paddingLeft: '10px'}}></i>
 
                     <input type="text" className="rmdb-searchbar-input" placeholder="Search"
                         onChange={this.doSearch} value={this.state.value} />
